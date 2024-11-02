@@ -1,4 +1,3 @@
-/* eslint-disable jsx-a11y/media-has-caption */
 import React, { useRef, useEffect } from "react";
 
 const Player = ({
@@ -40,8 +39,13 @@ const Player = ({
   useEffect(() => {
     if (ref.current && activeSong?.url) {
       ref.current.src = activeSong.url;
+      if (isPlaying) {
+        ref.current.play().catch((error) => {
+          console.error("Error playing audio:", error);
+        });
+      }
     }
-  }, [activeSong]);
+  }, [activeSong, isPlaying]);
 
   return (
     <audio
