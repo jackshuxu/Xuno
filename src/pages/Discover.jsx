@@ -23,14 +23,14 @@ const Discover = () => {
 
   const data = mockData;
 
-  const genreTitle = "Your Playlist"; // You can set a custom title
+  const genreTitle = "Your Library"; // You can set a custom title
 
   return (
     <div className="flex flex-col">
       {/* Header Section */}
       <div className="w-full flex justify-between items-center sm:flex-row flex-col mt-4 mb-10">
         <h2 className="font-bold text-3xl text-white text-left">
-          Discover {genreTitle}
+          {genreTitle}
         </h2>
 
         {/* Optionally remove or comment out the genre selector */}

@@ -1,12 +1,20 @@
+// src/components/Loader.jsx
+
 import React from "react";
 
-import { loader } from "../assets";
-
-const Loader = ({ title }) => (
-  <div className="w-full flex justify-center items-center flex-col">
-    <img src={loader} alt="loader" className="w-32 h-32 object-contain" />
-    <h1 className="font-bold text-2xl text-white mt-2">{title || "Loading"}</h1>
-  </div>
-);
+const Loader = ({ title }) => {
+  return (
+    <div className="flex flex-col items-center justify-center space-y-4 py-6">
+      <div className="flex space-x-2">
+        <div className="w-3 h-3 bg-white rounded-full animate-bounce animation-delay-200"></div>
+        <div className="w-3 h-3 bg-white rounded-full animate-bounce animation-delay-400"></div>
+        <div className="w-3 h-3 bg-white rounded-full animate-bounce animation-delay-600"></div>
+        <div className="w-3 h-3 bg-white rounded-full animate-bounce animation-delay-800"></div>
+        <div className="w-3 h-3 bg-white rounded-full animate-bounce animation-delay-1000"></div>
+      </div>
+      <p className="text-gray-400">{title}</p>
+    </div>
+  );
+};
 
 export default Loader;

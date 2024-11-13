@@ -16,6 +16,16 @@ import GoGoGoAudio from "../assets/music/GoGoGo.mp3";
 import MetallicFabricAudio from "../assets/music/metallic_fabric.mp3";
 import PointCloudsAudio from "../assets/music/point_clouds.mp3";
 
+// **New Imports**
+import PanImage from "../assets/images/pan.jpeg";
+import PanAudio from "../assets/music/pan.mp3";
+import FoamImage from "../assets/images/foam.jpeg";
+import FoamAudio from "../assets/music/foam.mp3";
+import HazeImage from "../assets/images/haze.jpeg";
+import HazeAudio from "../assets/music/haze.mp3";
+import MultigramImage from "../assets/images/multigram.jpeg";
+import MultigramAudio from "../assets/music/multigram.mp3";
+
 // src/components/mockData.js
 
 const mockData = [
@@ -26,6 +36,7 @@ const mockData = [
     images: { coverart: AIRPImage },
     artists: [{ adamid: "artist-1" }],
     url: AIRPAudio,
+    styles: ["Ambient", "Electronic"],
   },
   {
     key: "2",
@@ -34,6 +45,7 @@ const mockData = [
     images: { coverart: AntithesisImage },
     artists: [{ adamid: "artist-2" }],
     url: AntithesisAudio,
+    styles: ["Rock", "Alternative"],
   },
   {
     key: "3",
@@ -42,6 +54,7 @@ const mockData = [
     images: { coverart: EcstasyPasticheImage },
     artists: [{ adamid: "artist-3" }],
     url: EcstasyPasticheAudio,
+    styles: ["Jazz", "Blues"],
   },
   {
     key: "4",
@@ -50,6 +63,7 @@ const mockData = [
     images: { coverart: GoGoGoImage },
     artists: [{ adamid: "artist-4" }],
     url: GoGoGoAudio,
+    styles: ["Pop", "Dance"],
   },
   {
     key: "5",
@@ -58,6 +72,7 @@ const mockData = [
     images: { coverart: MetallicFabricImage },
     artists: [{ adamid: "artist-5" }],
     url: MetallicFabricAudio,
+    styles: ["Industrial", "Metal"],
   },
   {
     key: "6",
@@ -66,6 +81,43 @@ const mockData = [
     images: { coverart: PointCloudsImage },
     artists: [{ adamid: "artist-6" }],
     url: PointCloudsAudio,
+    styles: ["Synthwave", "Trance"],
+  },
+  {
+    key: "7",
+    title: "Pan",
+    subtitle: "JackX",
+    images: { coverart: PanImage },
+    artists: [{ adamid: "artist-7" }],
+    url: PanAudio,
+    styles: ["Folk", "Acoustic"],
+  },
+  {
+    key: "8",
+    title: "Foam",
+    subtitle: "JackX",
+    images: { coverart: FoamImage },
+    artists: [{ adamid: "artist-8" }],
+    url: FoamAudio,
+    styles: ["Indie", "Alternative"],
+  },
+  {
+    key: "9",
+    title: "Haze",
+    subtitle: "JackX",
+    images: { coverart: HazeImage },
+    artists: [{ adamid: "artist-9" }],
+    url: HazeAudio,
+    styles: ["Ambient", "Chillout"],
+  },
+  {
+    key: "10",
+    title: "Multigram",
+    subtitle: "JackX",
+    images: { coverart: MultigramImage },
+    artists: [{ adamid: "artist-10" }],
+    url: MultigramAudio,
+    styles: ["Electronic", "House"],
   },
 ];
 

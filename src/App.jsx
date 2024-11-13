@@ -4,46 +4,41 @@ import { Route, Routes } from "react-router-dom";
 import { Searchbar, Sidebar, MusicPlayer, TopPlay } from "./components";
 import {
   ArtistDetails,
-  TopArtists,
   AroundYou,
   Discover,
   Search,
   SongDetails,
-  TopCharts,
+  Create,
 } from "./pages";
 
 const App = () => {
   const { activeSong, isPlaying } = useSelector((state) => state.player);
-  const volume = 1; // Set default volume or get from state
-  const seekTime = 0; // Set default seekTime or get from state
-  const repeat = false; // Set default repeat or get from state
+  const volume = 1;
+  const seekTime = 0;
+  const repeat = false;
 
   return (
-    <div className="relative flex">
+    <div className="relative flex bg-black">
       <Sidebar />
-      <div className="flex-1 flex flex-col bg-gradient-to-br from-black to-[#121286]">
+      <div className="flex-1 flex flex-col bg-black">
         <Searchbar />
 
         <div className="px-6 h-[calc(100vh-72px)] overflow-y-scroll hide-scrollbar flex xl:flex-row flex-col-reverse">
           <div className="flex-1 h-fit pb-40">
             <Routes>
               <Route path="/" element={<Discover />} />
-              <Route path="/top-artists" element={<TopArtists />} />
-              <Route path="/top-charts" element={<TopCharts />} />
               <Route path="/around-you" element={<AroundYou />} />
               <Route path="/artists/:id" element={<ArtistDetails />} />
               <Route path="/songs/:songid" element={<SongDetails />} />
               <Route path="/search/:searchTerm" element={<Search />} />
+              <Route path="/create" element={<Create />} />{" "}
             </Routes>
-          </div>
-          <div className="xl:sticky relative top-0 h-fit">
-            <TopPlay />
           </div>
         </div>
       </div>
 
       {activeSong?.title && (
-        <div className="absolute h-28 bottom-0 left-0 right-0 flex animate-slideup bg-gradient-to-br from-white/10 to-[#2a2a80] backdrop-blur-lg rounded-t-3xl z-10">
+        <div className="absolute h-28 bottom-0 left-0 right-0 flex animate-slideup bg-black backdrop-blur-lg rounded-t-3xl z-10">
           <MusicPlayer />
         </div>
       )}

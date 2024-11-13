@@ -1,0 +1,5 @@
+// src/redux/actions/actionTypes.js
+
+export const GENERATE_MUSIC_REQUEST = "GENERATE_MUSIC_REQUEST";
+export const GENERATE_MUSIC_SUCCESS = "GENERATE_MUSIC_SUCCESS";
+export const GENERATE_MUSIC_FAILURE = "GENERATE_MUSIC_FAILURE";
