@@ -1,5 +1,3 @@
-// src/pages/Discover.js
-
 import React from "react";
 import { useDispatch, useSelector } from "react-redux";
 
@@ -11,19 +9,10 @@ import mockData from "../components/mockData";
 
 const Discover = () => {
   const dispatch = useDispatch();
-  // const { genreListId } = useSelector((state) => state.player);
   const { activeSong, isPlaying } = useSelector((state) => state.player);
-
-  // Since we're using mock data, comment out API calls and related code
-  // const { data, isFetching, error } = useGetSongsByGenreQuery(
-  //   genreListId || 'POP'
-  // );
-  // if (isFetching) return <Loader title="Loading songs..." />;
-  // if (error) return <Error />;
-
   const data = mockData;
 
-  const genreTitle = "Your Library"; // You can set a custom title
+  const genreTitle = "Your Library";
 
   return (
     <div className="flex flex-col">
